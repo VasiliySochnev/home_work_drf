@@ -1,6 +1,6 @@
+import os
 from pathlib import Path
 
-import os
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
@@ -67,7 +67,6 @@ DATABASES = {
         "OPTIONS": {"client_encoding": "utf8"},
         "HOST": os.getenv("HOST"),
         "PORT": os.getenv("PORT"),
-
     }
 }
 
