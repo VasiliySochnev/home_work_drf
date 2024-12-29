@@ -7,7 +7,7 @@ class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
 
 
-class MotoCreateAPIView(generics.CreateAPIView):
+class LessonCreateAPIView(generics.CreateAPIView):
     serializer_class = LessonSerializer
 
 class LessonListAPIView(generics.ListAPIView):
