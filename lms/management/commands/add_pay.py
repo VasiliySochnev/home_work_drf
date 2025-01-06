@@ -1,20 +1,18 @@
 from django.core.management.base import BaseCommand
 
-from users.models import User, Payments
 from lms.models import Course
+from users.models import Payments, User
 
 
 class Command(BaseCommand):
-    help = 'Adding payments'
+    help = "Adding payments"
 
     def handle(self, *args, **options):
         User.objects.all()
         Course.objects.all()
         Payments.objects.all()
 
-        course, _ = Course.objects.get_or_create(
-            title="C1", description="good C1"
-        )
+        course, _ = Course.objects.get_or_create(title="C1", description="good C1")
 
         user, _ = User.objects.get_or_create(
             email="student1@mail.ru", first_name="Ivan", last_name="Ivanov"
@@ -27,7 +25,6 @@ class Command(BaseCommand):
                 "amount_pay": 115000,
                 "way_pay": "Перевод на счет",
             }
-
         ]
 
         for payment_data in payments:

@@ -6,6 +6,7 @@ from lms.models import Course
 
 class User(AbstractUser):
     """Модель пользователя."""
+
     username = None
     email = models.EmailField(unique=True, verbose_name="Email")
     first_name = models.CharField(max_length=50, verbose_name="Имя")
@@ -40,16 +41,38 @@ class Payments(models.Model):
         (TRANSFER, "Перевод на счет"),
     ]
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь', blank=True, null=True, related_name='user')
-    date_pay = models.DateTimeField(auto_now=True, verbose_name='Дата платежа')
-    paid_course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name='Оплаченный курс', blank=True, null=True, related_name='paid_course')
-    amount_pay = models.PositiveIntegerField(verbose_name='Сумма оплаты', blank=True, null=True)
-    way_pay = models.CharField(max_length=50, choices=WAY_PAY_CHOICES, verbose_name='Способ оплаты', blank=True, null=True)
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        verbose_name="Пользователь",
+        blank=True,
+        null=True,
+        related_name="user",
+    )
+    date_pay = models.DateTimeField(auto_now=True, verbose_name="Дата платежа")
+    paid_course = models.ForeignKey(
+        Course,
+        on_delete=models.CASCADE,
+        verbose_name="Оплаченный курс",
+        blank=True,
+        null=True,
+        related_name="paid_course",
+    )
+    amount_pay = models.PositiveIntegerField(
+        verbose_name="Сумма оплаты", blank=True, null=True
+    )
+    way_pay = models.CharField(
+        max_length=50,
+        choices=WAY_PAY_CHOICES,
+        verbose_name="Способ оплаты",
+        blank=True,
+        null=True,
+    )
 
     class Meta:
         verbose_name = "Платеж"
         verbose_name_plural = "Платежи"
-        ordering = ('-way_pay',)
+        ordering = ("-way_pay",)
 
     def __str__(self):
         return f"{self.amount_pay}"
