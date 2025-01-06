@@ -17,6 +17,7 @@ mypy = "^1.14.0"
 flake8 = "^7.1.1"
 isort = "^5.13.2"
 ipython = "^8.31.0"
+django-filter = "^24.3"
 
 
 [build-system]

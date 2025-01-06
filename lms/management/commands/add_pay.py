@@ -13,7 +13,7 @@ class Command(BaseCommand):
         Payments.objects.all()
 
         course, _ = Course.objects.get_or_create(
-            title="java", description="good java"
+            title="C1", description="good C1"
         )
 
         user, _ = User.objects.get_or_create(
@@ -24,7 +24,7 @@ class Command(BaseCommand):
             {
                 "user": user,
                 "paid_course": course,
-                "amount_pay": 150000,
+                "amount_pay": 115000,
                 "way_pay": "Перевод на счет",
             }
 
