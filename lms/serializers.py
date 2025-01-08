@@ -25,9 +25,9 @@ class CourseSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
     def get_lesson_count(self, instans):
-        if instans.lessons.all().count():
-            return instans.lessons.all().count()
-        return 0
+
+        return instans.lessons.count()
+
 
 
 class PaymentsSerializer(serializers.ModelSerializer):
