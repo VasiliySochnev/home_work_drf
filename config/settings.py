@@ -1,6 +1,7 @@
+import os
+from datetime import timedelta
 from pathlib import Path
 
-import os
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
@@ -25,7 +26,22 @@ INSTALLED_APPS = [
     "rest_framework",
     "users",
     "lms",
+    "django_filters",
+    "rest_framework_simplejwt",
 ]
+
+
+REST_FRAMEWORK = {
+    "DEFAULT_FILTER_BACKENDS": [
+        "django_filters.rest_framework.DjangoFilterBackend",
+    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ],
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -67,7 +83,6 @@ DATABASES = {
         "OPTIONS": {"client_encoding": "utf8"},
         "HOST": os.getenv("HOST"),
         "PORT": os.getenv("PORT"),
-
     }
 }
 
@@ -108,3 +123,9 @@ MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "users.User"
+
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+}
