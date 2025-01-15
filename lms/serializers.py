@@ -13,9 +13,9 @@ class LessonSerializer(serializers.ModelSerializer):
 
 class CourseSerializer(serializers.ModelSerializer):
 
-    course_lessons = serializers.CharField(
-        source="lesson_set.all.lesson", read_only=True
-    )
+    # course_lessons = serializers.CharField(
+    #     source="lesson_set.all.lesson", read_only=True
+    # )
     lessons = LessonSerializer(many=True)
 
     lesson_count = serializers.SerializerMethodField()
@@ -27,7 +27,6 @@ class CourseSerializer(serializers.ModelSerializer):
     def get_lesson_count(self, instans):
 
         return instans.lessons.count()
-
 
 
 class PaymentsSerializer(serializers.ModelSerializer):

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="102cfd4f-6af5-41c7-9ce6-6ef387a39baa" name="Changes" comment="go linters group">
+      <change afterPath="$PROJECT_DIR$/.flake8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/home_work_drf.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/management/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/management/commands/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/management/commands/c_moder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/management/commands/csu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/permissions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lms/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/lms/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lms/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lms/migrations/0002_alter_lesson_url.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lms/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/lms/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lms/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/lms/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lms/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/lms/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lms/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0002_payments.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0003_alter_payments_options.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0004_alter_payments_date_pay.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2qrg2zphJaBdekcC0EVfEdS22EQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feture__1",
+    "last_opened_file_path": "D:/all/Skypro/pycharm project/course_work_4",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\all\Skypro\pycharm project\home_work_drf" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="102cfd4f-6af5-41c7-9ce6-6ef387a39baa" name="Changes" comment="" />
+      <created>1735425905738</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735425905738</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add app users and lms, model user, settings">
+      <option name="closed" value="true" />
+      <created>1735429632931</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735429632932</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add migrations">
+      <option name="closed" value="true" />
+      <created>1735429746508</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735429746508</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add models course and lesson">
+      <option name="closed" value="true" />
+      <created>1735432221507</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735432221507</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add serilizers for models">
+      <option name="closed" value="true" />
+      <created>1735432402237</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735432402237</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add views for lms">
+      <option name="closed" value="true" />
+      <created>1735432987938</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735432987938</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add urls for lms">
+      <option name="closed" value="true" />
+      <created>1735434598734</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735434598734</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add correct models and view">
+      <option name="closed" value="true" />
+      <created>1735437338874</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735437338874</updated>
+    </task>
+    <task id="LOCAL-00008" summary="passage through groups linter">
+      <option name="closed" value="true" />
+      <created>1735437998319</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735437998319</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add correct urls in lms">
+      <option name="closed" value="true" />
+      <created>1735438114350</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735438114350</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add in serializer for course serializer for quantity lessons">
+      <option name="closed" value="true" />
+      <created>1736123705266</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1736123705266</updated>
+    </task>
+    <task id="LOCAL-00011" summary="adding model Payments">
+      <option name="closed" value="true" />
+      <created>1736125888353</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1736125888353</updated>
+    </task>
+    <task id="LOCAL-00012" summary="adding custom command for payments">
+      <option name="closed" value="true" />
+      <created>1736132749407</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1736132749407</updated>
+    </task>
+    <task id="LOCAL-00013" summary="adding view, url for payments and filters">
+      <option name="closed" value="true" />
+      <created>1736151090908</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1736151090908</updated>
+    </task>
+    <task id="LOCAL-00014" summary="adding view, url for payments and filters">
+      <option name="closed" value="true" />
+      <created>1736151108010</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1736151108010</updated>
+    </task>
+    <task id="LOCAL-00015" summary="adding correct for model payments">
+      <option name="closed" value="true" />
+      <created>1736151645810</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1736151645810</updated>
+    </task>
+    <task id="LOCAL-00016" summary="go linters group">
+      <option name="closed" value="true" />
+      <created>1736151815444</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1736151815444</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add app users and lms, model user, settings" />
+    <MESSAGE value="add migrations" />
+    <MESSAGE value="add models course and lesson" />
+    <MESSAGE value="add serilizers for models" />
+    <MESSAGE value="add views for lms" />
+    <MESSAGE value="add urls for lms" />
+    <MESSAGE value="add correct models and view" />
+    <MESSAGE value="passage through groups linter" />
+    <MESSAGE value="add correct urls in lms" />
+    <MESSAGE value="add in serializer for course serializer for quantity lessons" />
+    <MESSAGE value="adding model Payments" />
+    <MESSAGE value="adding custom command for payments" />
+    <MESSAGE value="adding view, url for payments and filters" />
+    <MESSAGE value="adding correct for model payments" />
+    <MESSAGE value="go linters group" />
+    <option name="LAST_COMMIT_MESSAGE" value="go linters group" />
+  </component>
+</project>
