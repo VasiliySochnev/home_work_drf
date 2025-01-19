@@ -5,7 +5,7 @@ from lms.apps import LmsConfig
 from lms.views import (CourseViewSet, LessonCreateAPIView,
                        LessonDestroyAPIView, LessonListAPIView,
                        LessonRetrieveAPIView, LessonUpdateAPIView,
-                       PaymentsListAPIView)
+                       PaymentsListAPIView, SubscriptionView)
 
 app_name = LmsConfig.name
 
@@ -23,4 +23,5 @@ urlpatterns = [
         "lesson/delete/<int:pk>/", LessonDestroyAPIView.as_view(), name="lesson-delete"
     ),
     path("payments/", PaymentsListAPIView.as_view(), name="payments_list"),
+    path("subscribe/", SubscriptionView.as_view(), name="subscribe"),
 ] + router.urls

@@ -1,6 +1,7 @@
 from django.db import models
 
 from config import settings
+from config.settings import AUTH_USER_MODEL
 
 
 class Course(models.Model):
@@ -55,3 +56,11 @@ class Lesson(models.Model):
 
     def __str__(self):
         return f"{self.title}"
+
+
+class Subscription(models.Model):
+    """Модель подписка на обновление курса"""
+    id = models.AutoField(primary_key=True)
+    user = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name="Пользователь")
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name="Курс")
+    status = models.BooleanField(default=True, verbose_name="Активна", null=True, blank=True)
