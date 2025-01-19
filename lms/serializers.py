@@ -1,21 +1,21 @@
 from rest_framework import serializers
 
 from lms.models import Course, Lesson
+from lms.validators import UrlValidator
 from users.models import Payments
 
 
 class LessonSerializer(serializers.ModelSerializer):
+    # url = serializers.CharField(validators=[UrlValidator(field='url')])
 
     class Meta:
         model = Lesson
         fields = "__all__"
+        validators = [UrlValidator(field='url')]
+
 
 
 class CourseSerializer(serializers.ModelSerializer):
-
-    # course_lessons = serializers.CharField(
-    #     source="lesson_set.all.lesson", read_only=True
-    # )
     lessons = LessonSerializer(many=True)
 
     lesson_count = serializers.SerializerMethodField()
