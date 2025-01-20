@@ -60,7 +60,12 @@ class Lesson(models.Model):
 
 class Subscription(models.Model):
     """Модель подписка на обновление курса"""
+
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name="Пользователь")
+    user = models.ForeignKey(
+        AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name="Пользователь"
+    )
     course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name="Курс")
-    status = models.BooleanField(default=True, verbose_name="Активна", null=True, blank=True)
+    status = models.BooleanField(
+        default=True, verbose_name="Активна", null=True, blank=True
+    )

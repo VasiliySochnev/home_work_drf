@@ -1,4 +1,7 @@
+from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import BasePermission
+
+from lms.models import Lesson
 
 
 class Staff(BasePermission):
@@ -19,7 +22,9 @@ class Is_Users(BasePermission):
 
 class Owner(BasePermission):
     def has_permission(self, request, view):
-        if request.user.owner:
-            return True
 
+        lesson = get_object_or_404(Lesson, pk=view.kwargs["pk"])
+        if lesson.owner == request.user:
+
+            return True
         return False

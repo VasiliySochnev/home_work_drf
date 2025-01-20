@@ -1,5 +1,5 @@
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import generics, viewsets, status
+from rest_framework import generics, status, viewsets
 from rest_framework.filters import OrderingFilter
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
@@ -16,7 +16,7 @@ from users.permissions import Is_Users, Owner, Staff
 
 class CourseViewSet(viewsets.ModelViewSet):
     serializer_class = CourseSerializer
-    queryset = Course.objects.all()
+    queryset = Course.objects.all().order_by("id")
     pagination_class = CoursePaginator
 
     def get_permissions(self, permission_classes=None):
@@ -49,10 +49,9 @@ class LessonCreateAPIView(generics.CreateAPIView):
 
 class LessonListAPIView(generics.ListAPIView):
     serializer_class = LessonSerializer
-    queryset = Lesson.objects.all()
+    queryset = Lesson.objects.all().order_by("id")
     pagination_class = LessonPaginator
     permission_classes = [IsAuthenticated]
-
 
 
 class LessonRetrieveAPIView(generics.RetrieveAPIView):
@@ -86,7 +85,7 @@ class SubscriptionView(APIView):
 
     def post(self, request):
         user = request.user
-        course_id = request.data.get('course_id')
+        course_id = request.data.get("course_id")
         course_item = get_object_or_404(Course, id=course_id)
 
         subs_item = Subscription.objects.filter(user=user, course=course_item)
@@ -95,12 +94,12 @@ class SubscriptionView(APIView):
 
         if subs_item.exists():
             subs_item.delete()
-            message = 'Подписка удалена'
+            message = "Подписка удалена"
         # Если подписки у пользователя на этот курс нет - создаем ее
 
         else:
             Subscription.objects.create(user=user, course=course_item)
-            message = 'Подписка добавлена'
+            message = "Подписка добавлена"
 
         # Возвращаем ответ в API
 
