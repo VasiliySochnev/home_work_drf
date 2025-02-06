@@ -164,3 +164,11 @@ CELERY_TASK_TIME_LIMIT = 30 * 60
 # больше не управляет попытками повторного подключения к брокеру
 # во время запуска. Вместо этого вам нужно использовать новый параметр broker_connection_retry_on_startup.
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = os.getenv("EMAIL_HOST")
+EMAIL_PORT = os.getenv("EMAIL_PORT")
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
