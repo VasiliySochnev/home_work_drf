@@ -8,6 +8,8 @@ from lms.models import Subscription, Course
 
 @shared_task
 def update_message(id):
+    """Задача для отправки письма подписчику,
+    если обновилась информация по курсу."""
 
     recipient_list = Subscription.objects.filter(status=True, course=id).values_list('user__email', flat=True)
 

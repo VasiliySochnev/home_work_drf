@@ -14,6 +14,7 @@ class UserAdmin(admin.ModelAdmin):
         "last_name",
         "phone",
         "city",
+        "is_active"
     )
     search_fields = ("email",)
     list_filter = ("email",)
