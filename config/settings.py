@@ -15,7 +15,7 @@ STRIPE_API_KEY = os.getenv("STRIPE_API_KEY")
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 
 INSTALLED_APPS = [
@@ -135,24 +135,24 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:8000',
-    'http://127.0.0.1:8000',
+    "http://127.0.0.1:8000",
+    "http://127.0.0.1:8000",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://127.0.0.1:8000',
-    'http://127.0.0.1:8000',
+    "http://127.0.0.1:8000",
+    "http://127.0.0.1:8000",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = False
 
-CUR_API_URL = 'https://api.currencyapi.com/'
+CUR_API_URL = "https://api.currencyapi.com/"
 
-CUR_API_KEY = os.getenv('CUR_API_KEY')
+CUR_API_KEY = os.getenv("CUR_API_KEY")
 
-CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL')
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL")
 
-CELERY_RESULT_BACKEND = os.getenv('CELERY_RESULT_BACKEND')
+CELERY_RESULT_BACKEND = os.getenv("CELERY_RESULT_BACKEND")
 
 CELERY_TIMEZONE = TIME_ZONE
 
@@ -162,8 +162,19 @@ CELERY_TASK_TIME_LIMIT = 30 * 60
 
 # В этой версии параметр broker_connection_retry
 # больше не управляет попытками повторного подключения к брокеру
-# во время запуска. Вместо этого вам нужно использовать новый параметр broker_connection_retry_on_startup.
+# во время запуска. Вместо этого нужно использовать новый параметр broker_connection_retry_on_startup.
+
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
+
+CELERY_BEAT_SCHEDULE = {
+    "task-name": {
+        "task": "users.tasks.exam_user",  # Путь к задаче
+        "schedule": timedelta(
+            days=10
+        ),  # Расписание выполнения задачи (например, каждые 10 минут)
+    },
+}
+
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = os.getenv("EMAIL_HOST")

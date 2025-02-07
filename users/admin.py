@@ -14,7 +14,7 @@ class UserAdmin(admin.ModelAdmin):
         "last_name",
         "phone",
         "city",
-        "is_active"
+        "is_active",
     )
     search_fields = ("email",)
     list_filter = ("email",)
@@ -57,6 +57,7 @@ class LessonAdmin(admin.ModelAdmin):
     )
     search_fields = ("title",)
     list_filter = ("course",)
+
 
 @admin.register(Subscription)
 class SubscriptionAdmin(admin.ModelAdmin):

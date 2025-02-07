@@ -1,15 +1,15 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, status, viewsets
-from rest_framework.decorators import action
 from rest_framework.filters import OrderingFilter
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from lms.tasks import update_message
+
 from lms.models import Course, Lesson, Subscription
 from lms.paginators import CoursePaginator, LessonPaginator
 from lms.serializers import CourseSerializer, LessonSerializer, PaymentsSerializer
+from lms.tasks import update_message
 from users.models import Payments
 from users.permissions import Is_Users, Owner, Staff
 
@@ -46,6 +46,7 @@ class CourseViewSet(viewsets.ModelViewSet):
         update_message.delay(instance.id)
 
         return Response(serializer.data, status=status.HTTP_200_OK)
+
 
 class LessonCreateAPIView(generics.CreateAPIView):
     serializer_class = LessonSerializer
