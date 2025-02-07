@@ -1,3 +1,71 @@
 from django.contrib import admin
 
-# Register your models here.
+from lms.models import Course, Lesson, Subscription
+from users.models import Payments, User
+
+
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    list_display = (
+        "id",
+        "avatar",
+        "email",
+        "first_name",
+        "last_name",
+        "phone",
+        "city",
+        "is_active",
+    )
+    search_fields = ("email",)
+    list_filter = ("email",)
+
+
+@admin.register(Payments)
+class PaymentsAdmin(admin.ModelAdmin):
+    list_display = (
+        "id",
+        "user",
+        "date_pay",
+        "paid_course",
+        "amount_pay",
+        "way_pay",
+    )
+    search_fields = ("user",)
+    list_filter = ("paid_course",)
+
+
+@admin.register(Course)
+class CourseAdmin(admin.ModelAdmin):
+    list_display = (
+        "id",
+        "title",
+        "description",
+        "image",
+    )
+    search_fields = ("title",)
+    list_filter = ("title",)
+
+
+@admin.register(Lesson)
+class LessonAdmin(admin.ModelAdmin):
+    list_display = (
+        "id",
+        "title",
+        "description",
+        "url",
+        "course",
+    )
+    search_fields = ("title",)
+    list_filter = ("course",)
+
+
+@admin.register(Subscription)
+class SubscriptionAdmin(admin.ModelAdmin):
+    list_display = (
+        "id",
+        "user",
+        "course",
+        "status",
+    )
+    search_fields = ("user",)
+    list_filter = ("status",)
